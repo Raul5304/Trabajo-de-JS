@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Básicos en JavaScript</title>
+</head>
+<body>
+    <h1>Operadores Básicos en JavaScript</h1>
+    
+    <h2>Operadores Aritméticos</h2>
+    <p id="suma"></p>
+    <p id="resta"></p>
+    <p id="multiplicacion"></p>
+    <p id="division"></p>
+    
+    <h2>Operadores de Comparación</h2>
+    <p id="igualdad"></p>
+    <p id="desigualdad"></p>
+    <p id="mayor"></p>
+    <p id="menor"></p>
+    
+    <h2>Operadores Lógicos</h2>
+    <p id="and"></p>
+    <p id="or"></p>
+
+    <script>
+        // Operadores Aritméticos
+        let a = 10, b = 5;
+        document.getElementById("suma").textContent = "Suma: " + (a + b);        // 10 + 5 = 15
+        document.getElementById("resta").textContent = "Resta: " + (a - b);      // 10 - 5 = 5
+        document.getElementById("multiplicacion").textContent = "Multiplicación: " + (a * b); // 10 * 5 = 50
+        document.getElementById("division").textContent = "División: " + (a / b); // 10 / 5 = 2
+
+        // Operadores de Comparación
+        let c = 10, d = 20;
+        document.getElementById("igualdad").textContent = "Igualdad (==): " + (c == d);  // false
+        document.getElementById("desigualdad").textContent = "Desigualdad (!=): " + (c != d);  // true
+        document.getElementById("mayor").textContent = "Mayor que (>): " + (c > d); // false
+        document.getElementById("menor").textContent = "Menor que (<): " + (c < d); // true
+
+        // Operadores Lógicos
+        let e = true, f = false;
+        document.getElementById("and").textContent = "AND (&&): " + (e && f); // false
+        document.getElementById("or").textContent = "OR (||): " + (e || f);  // true
+    </script>
+</body>
+</html>
