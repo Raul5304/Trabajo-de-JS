@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Año de Nacimiento</title>
+</head>
+<body>
+    <h1>Calculadora de Año de Nacimiento</h1>
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" required><br><br>
+
+        <button type="button" onclick="calcularAñoNacimiento()">Calcular Año de Nacimiento</button>
+    </form>
+
+    <h2 id="resultado"></h2>
+
+    <script>
+        // Función para calcular el año de nacimiento
+        function calcularAñoNacimiento() {
+            // Obtener los valores del formulario
+            const nombre = document.getElementById("nombre").value;
+            const edad = document.getElementById("edad").value;
+
+            // Comprobar que los datos son válidos
+            if (nombre === "" || edad === "") {
+                alert("Por favor, ingrese todos los datos.");
+                return;
+            }
+
+            // Obtener el año actual
+            const añoActual = new Date().getFullYear();
+
+            // Calcular el año de nacimiento
+            const añoNacimiento = añoActual - edad;
+
+            // Mostrar el resultado
+            const resultado = document.getElementById("resultado");
+            resultado.innerHTML = `${nombre}, tu año de nacimiento estimado es: ${añoNacimiento}`;
+        }
+    </script>
+</body>
+</html>

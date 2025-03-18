@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa con Arrays</title>
+</head>
+<body>
+    <h1>Programa de Suma y Promedio con Arrays</h1>
+
+    <p>Array de números: [2, 5, 8, 12, 7]</p>
+    <p id="suma"></p>
+    <p id="promedio"></p>
+
+    <script>
+        // Declaración del array de números
+        const numeros = [2, 5, 8, 12, 7];
+
+        // Función para calcular la suma
+        function calcularSuma(arr) {
+            let suma = 0;
+            for (let i = 0; i < arr.length; i++) {
+                suma += arr[i];
+            }
+            return suma;
+        }
+
+        // Función para calcular el promedio
+        function calcularPromedio(arr) {
+            let suma = calcularSuma(arr);
+            return suma / arr.length;
+        }
+
+        // Calculando la suma y el promedio
+        const suma = calcularSuma(numeros);
+        const promedio = calcularPromedio(numeros);
+
+        // Mostrando los resultados en el HTML
+        document.getElementById('suma').innerText = 'La suma de los números es: ' + suma;
+        document.getElementById('promedio').innerText = 'El promedio de los números es: ' + promedio.toFixed(2);
+    </script>
+</body>
+</html>
