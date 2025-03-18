@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa con Bucles</title>
+</head>
+<body>
+    <h1>Programa que usa bucles for y while</h1>
+
+    <h2>Bucle for:</h2>
+    <p id="bucleFor"></p>
+
+    <h2>Bucle while:</h2>
+    <p id="bucleWhile"></p>
+
+    <script>
+        // Bucle 'for': contaremos del 1 al 10
+        let resultadoFor = '';
+        for (let i = 1; i <= 10; i++) {
+            resultadoFor += i + ' ';
+        }
+
+        // Bucle 'while': también contamos del 1 al 10
+        let resultadoWhile = '';
+        let j = 1;
+        while (j <= 10) {
+            resultadoWhile += j + ' ';
+            j++;
+        }
+
+        // Mostramos los resultados en el HTML
+        document.getElementById('bucleFor').innerText = 'Contando con el bucle for: ' + resultadoFor;
+        document.getElementById('bucleWhile').innerText = 'Contando con el bucle while: ' + resultadoWhile;
+    </script>
+</body>
+</html>
